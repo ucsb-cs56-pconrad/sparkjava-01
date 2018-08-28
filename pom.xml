@@ -124,7 +124,7 @@
       <plugin>
 	<groupId>com.heroku.sdk</groupId>
 	<artifactId>heroku-maven-plugin</artifactId>
-	<version>0.4.4</version>
+	<version>2.0.3</version>
 	<configuration>
           <jdkVersion>1.8</jdkVersion>
           <!-- Use your own application name -->
@@ -134,7 +134,6 @@
             <!-- Tell Heroku how to launch your application -->
             <!-- You might have to remove the ./ in front   -->
             <web>java $JAVA_OPTS -jar target/sparkjava-demo-01-1.0-jar-with-dependencies.jar</web>
-
 
           </processTypes>
 	</configuration>
