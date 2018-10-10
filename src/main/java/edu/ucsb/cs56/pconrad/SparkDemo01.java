@@ -9,8 +9,11 @@ import static spark.Spark.port;
  */
 
 public class SparkDemo01 {
+
     public static void main(String[] args) {
 
+		System.out.println("About to set the port...");
+		
         port(getHerokuAssignedPort());
 		
 		System.out.println("");
@@ -18,7 +21,12 @@ public class SparkDemo01 {
 		System.out.println("");						  
 		System.out.println("In browser, visit: http://localhost:" + getHerokuAssignedPort() + "/hello");
 		System.out.println("");
-		spark.Spark.get("/", (req, res) -> "<b>Hello World!</b>\n");
+		spark.Spark.get("/hello", (req, res) -> "<b>Hello World!</b>\n");
+
+		spark.Spark.get("/nihao", (req, res) -> "<b>Ni Hao</b>\n");
+
+		spark.Spark.get("/hola", (req, res) -> "<b>¡Hola!</b>\n");
+		spark.Spark.get("/", (req, res) -> "<h1>Yo</h1>\n");
 
 	}
 	
